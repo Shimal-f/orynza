@@ -1,0 +1,4 @@
+ORYNZA — EMPTY MUSIC LIBRARY STARTER
+No demo tracks, artists, or seed playlists are included.
+Run start.bat or python -m http.server 8000 from this folder.
+Import your own music from Add Song > Import Audio Folder.

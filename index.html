@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#214d3b"><meta name="description" content="ORYNZA — Music, discovered beautifully.">
+<title>ORYNZA — Music, discovered beautifully</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+<a class="brand" href="#" data-view="home"><span class="brand-mark">♫</span><span>ORYNZA<small>MUSIC, DISCOVERED BEAUTIFULLY</small></span></a>
+<div class="nav-label">MENU</div><nav class="nav-group">
+<button class="nav-link active" data-view="home"><span>⌂</span>Home</button>
+<button class="nav-link" data-view="search"><span>⌕</span>Search</button>
+<button class="nav-link" data-view="explore"><span>✳</span>Explore</button>
+<button class="nav-link" data-view="categories"><span>▦</span>Categories</button>
+</nav>
+<div class="nav-label library-label">YOUR LIBRARY</div><nav class="nav-group">
+<button class="nav-link" data-view="playlists"><span>▤</span>Playlists</button>
+<button class="nav-link" data-view="favourites"><span>♡</span>Favourites</button>
+<button class="nav-link" data-view="recent"><span>◷</span>Recently Played</button>
+<button class="nav-link" data-view="add-song"><span>＋</span>Add Song</button>
+</nav>
+<div class="sidebar-note"><b>A little more you.</b><p>Keep your favourite sounds close.</p></div>
+<div class="sidebar-foot">A FRONT-END MUSIC EXPERIENCE<br>© ORYNZA 2026</div>
+</aside>
+<main class="main">
+<header class="topbar"><button class="mobile-menu" id="menuBtn" aria-label="Toggle navigation">☰</button><div class="mobile-brand">ORYNZA <span>♫</span></div>
+<div class="arrows"><button id="backBtn" aria-label="Go home">‹</button><button id="forwardBtn" aria-label="Explore">›</button></div>
+<label class="top-search"><span>⌕</span><input id="globalSearch" type="search" placeholder="What do you want to listen to?"><kbd>/</kbd></label>
+<button class="profile" id="profile" title="Guest profile">G</button></header>
+<div id="mobileNav" class="mobile-nav">
+<button data-view="home">Home</button><button data-view="search">Search</button><button data-view="explore">Explore</button><button data-view="playlists">Playlists</button><button data-view="favourites">Favourites</button><button data-view="add-song">Add Song</button>
+</div>
+<div id="viewRoot" class="view-root" tabindex="-1"></div>
+</main></div>
+<footer class="player">
+<div class="now-playing"><img id="playerCover" src="assets/images/s01.svg" alt="Current track artwork"><div class="track-meta"><strong id="playerTitle">Choose a song</strong><span id="playerArtist">Your next favourite is waiting</span></div><button id="likeCurrent" class="icon-btn" aria-label="Add to favourites">♡</button></div>
+<div class="player-center"><div class="player-actions"><button id="shuffleBtn" class="icon-btn" title="Shuffle" aria-label="Shuffle">⤨</button><button id="prevBtn" class="icon-btn" title="Previous" aria-label="Previous">◀|</button><button id="playBtn" class="play-button" title="Play" aria-label="Play">▶</button><button id="nextBtn" class="icon-btn" title="Next" aria-label="Next">|▶</button><button id="repeatBtn" class="icon-btn" title="Repeat" aria-label="Repeat">↻</button></div>
+<div class="timeline"><span id="currentTime">0:00</span><input id="seekBar" type="range" min="0" max="100" value="0" aria-label="Seek"><span id="totalTime">0:00</span></div></div>
+<div class="player-extra"><button id="queueBtn" class="icon-btn" title="Queue">☷</button><button id="muteBtn" class="icon-btn" title="Mute">◖</button><input id="volumeBar" type="range" min="0" max="1" step=".01" value=".8" aria-label="Volume"></div>
+</footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div><audio id="audio" preload="metadata"></audio>
+<script src="js/player.js"></script><script src="js/search.js"></script><script src="js/playlist.js"></script><script src="js/favourites.js"></script><script src="js/app.js"></script>
+</body></html>
